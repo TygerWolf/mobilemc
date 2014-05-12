@@ -1,24 +1,3 @@
 <h1> Add a new Track:</h1>
 
-<%= form_for @track do |f| %>
-
-  <p>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  </p>
-
-  <p>
-  <%= f.label :hook %>
-  <%= f.text_area :hook %>
-  </p>
-
-  <p>
-  <%= f.label :barindicator %>
-  <%= f.text_field :barindicator %>
-  </p>
-
-  <p>
-  <%= f.submit "Add new track" %>
-  </p>
-
-<%end%>
+<%= render "form" %>
