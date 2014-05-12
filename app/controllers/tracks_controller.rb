@@ -42,7 +42,7 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:title, :hook, :barindicator)
+    params.require(:track).permit(:title, :lyrics, :barindicator)
   end
 
 end
