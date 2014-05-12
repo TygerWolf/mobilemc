@@ -10,7 +10,7 @@ class TracksController < ApplicationController
   def create
     @track = Track.new(track_params)
     if @track.save
-      redirect_to track_path
+      redirect_to track_path(@track)
     else
       render :new
     end
