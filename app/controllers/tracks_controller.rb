@@ -30,10 +30,14 @@ class TracksController < ApplicationController
 
   def update
     @track = Track.find(params[:id])
-    if @track.update_attributes(track_params)
-      redirect_to track_path
-    else
-      render :edit
+    respond_to do |format|
+      if @track.update_attributes(track_params)
+        format.html {redirect_to track_path}
+        format.js {}
+      else
+        render :edit
+        format.js {}
+      end
     end
   end
 
