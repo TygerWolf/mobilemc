@@ -27,5 +27,8 @@ var hook = 0
     });
   }
 
+  $('p').first().prepend('<h2>HOOK</h2>');
+  $( "p:gt(0)" ).prepend('<h2>VERSE</h2>');
+
 });
 
