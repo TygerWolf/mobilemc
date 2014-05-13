@@ -1,7 +1,8 @@
-<h1> <%= @track.title %></h1>
+<div id="Track">
 
-<h3>bar indicator: <%= @track.barindicator %></h3>
-<h3> <%= @track.lyrics %></h3>
+  <%=render :partial => 'tracks' %>
+
+</div>
 
 <%= link_to "edit", edit_track_path(@track.id) %>
 

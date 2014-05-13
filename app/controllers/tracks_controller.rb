@@ -9,10 +9,14 @@ class TracksController < ApplicationController
 
   def create
     @track = Track.new(track_params)
-    if @track.save
-      redirect_to track_path(@track)
-    else
-      render :new
+    respond_to do |format|
+      if @track.save
+        format.html {redirect_to track_path(@track)}
+        format.js {}
+      else
+        format.html {render :new}
+        format.js {}
+      end
     end
   end
 
