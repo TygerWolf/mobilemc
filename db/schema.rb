@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513180501) do
+ActiveRecord::Schema.define(version: 20140512211153) do
 
   create_table "tracks", force: true do |t|
     t.string   "title"
@@ -19,12 +19,6 @@ ActiveRecord::Schema.define(version: 20140513180501) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "lyrics"
-  end
-
-  create_table "verses", force: true do |t|
-    t.text     "verse"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end

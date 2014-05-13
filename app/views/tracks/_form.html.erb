@@ -1,6 +1,11 @@
 <%= form_for @track do |f| %>
 
   <p>
+  <%= f.label :barindicator %>
+  <%= f.text_field :barindicator %>
+  </p>
+
+  <p>
   <%= f.label :title %>
   <%= f.text_field :title %>
   </p>
@@ -10,10 +15,14 @@
   <%= f.text_area :lyrics %>
   </p>
 
+<%#= form_for [@track, @verse], :remote => true do |f| %>
+
   <p>
-  <%= f.label :barindicator %>
-  <%= f.text_field :barindicator %>
+  <%#= f.label :verse %>
+  <%#= f.text_area :verse %>
   </p>
+
+<%# end %>
 
   <p>
   <%= f.submit %>
