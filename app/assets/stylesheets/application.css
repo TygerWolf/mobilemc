@@ -11,3 +11,42 @@
  *= require_self
  *= require_tree .
  */
+
+
+ 
+body {
+  background-color: black;
+  color: white;
+  font-family: helvetica; 
+}
+
+h1 {
+  font-size: 500;
+  color: yellow;
+  border: yellow;
+}
+
+#track_lyrics {
+  height: 300px;
+  width: 300px;
+  float: left;
+  
+}
+
+#track_barindicator {
+  width: 200px;
+}
+
+#track_title {
+  width: 200px;
+}
+
+form {
+  position: relative;
+  margin-left: 5px;
+}
+
+#save {
+  position: relative;
+  clear: both;
+} 
