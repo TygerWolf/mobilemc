@@ -4,6 +4,7 @@ class CreateLyrics < ActiveRecord::Migration
       t.string :block_type
       t.text :content
       t.integer :order
+      t.belongs_to :tracks
 
       t.timestamps
     end
