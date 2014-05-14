@@ -22,7 +22,7 @@ class TracksController < ApplicationController
 
   def show
     @track = Track.find(params[:id])
-    
+    @lyric = @track.lyrics.build
   end
 
   def edit
@@ -51,7 +51,7 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:title, :lyrics, :barindicator)
+    params.require(:track).permit(:title, :barindicator)
   end
 
 end
