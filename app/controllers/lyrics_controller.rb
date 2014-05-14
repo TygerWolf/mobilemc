@@ -23,7 +23,7 @@ class LyricsController < ApplicationController
     @track = Track.find(params[:track_id])
   end
   def lyric_params
-    params.require(:lyric).permit(:content, :block_id, :order, :tracks_id)
+    params.require(:lyric).permit(:content, :block_type, :order, :tracks_id)
   end
 
 

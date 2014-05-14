@@ -4,9 +4,15 @@
 
 </div>
 
-  <div id="lyric">
-    <%= form_for([@track, @lyric], :remote => true) do |f| %>
-  </div>
+
+
+<div id="lyric">
+  <%= form_for([@track, @lyric], :remote => true) do |f| %>
+</div>
+
+    <div class="dropdown">
+    <%= f.select :block_type, ["Hook", "Verse"]  %>
+    </div>
 
     <div class="field">
       <%= f.label :content %><br/>
