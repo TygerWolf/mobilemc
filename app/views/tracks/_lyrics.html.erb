@@ -3,6 +3,7 @@
     <p>
     <%= lyric.content %>
     <br>
+    <%= link_to 'edit lyrics', [:edit, @track, @lyric.id] %>
   </p>
   </div>
-  <% end %>
+<% end %>

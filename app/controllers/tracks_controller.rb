@@ -23,6 +23,7 @@ class TracksController < ApplicationController
   def show
     @track = Track.find(params[:id])
     @lyric = @track.lyrics.build
+
   end
 
   def edit

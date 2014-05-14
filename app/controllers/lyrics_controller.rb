@@ -16,6 +16,18 @@ class LyricsController < ApplicationController
     end
   end
 
+  def edit
+    @lyric = Lyric.find(params[:id])
+  end
+
+  def update
+    @lyric = @track.lyrics.find(params[:id])
+      if @lyric.update_attributes(lyric_params)
+        redirect_to track_lyric_path(@track, @lyric.id)
+      else
+        redirect_to edit_track_lyric_path(@track, @lyric.id)
+      end
+  end
 
 
   private

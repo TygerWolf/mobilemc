@@ -7,24 +7,9 @@
 
 
 <div id="lyric">
-  <%= form_for([@track, @lyric], :remote => true) do |f| %>
+  <%=render :partial => 'form_lyrics' %>
 </div>
 
-    <div class="dropdown">
-    <%= f.select :block_type, ["Hook", "Verse"]  %>
-    </div>
-
-    <div class="field">
-      <%= f.label :content %><br/>
-      <%= f.text_area :content %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-
-<% end %>
 
 <%= link_to "edit", edit_track_path(@track.id) %>
 
