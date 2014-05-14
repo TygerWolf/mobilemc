@@ -1,8 +1,10 @@
+
+
 $(document).ready(function(){
 
 var counter = 0
 var hook = 0
-
+  
   $('body').keypress(function(e){
     if(e.which === 13){
       counter+=1;
@@ -26,9 +28,6 @@ var hook = 0
       data: data
     });
   }
-
-  $('p').first().prepend('<h2>HOOK</h2>');
-  $( "p:gt(0)" ).prepend('<h2>VERSE</h2>');
-
 });
+
 
