@@ -1,20 +1,12 @@
 <div id="Track">
-
   <%=render :partial => 'tracks' %>
-
 </div>
 
+<%= link_to "Edit Song", edit_track_path(@track.id) %> |
+<%= link_to "Delete Song", @track, :method => :delete ,:confirm => "Are you sure?" %> |
+<%= link_to "Add a Block!", new_track_lyric_path(@track.id) %>
 
-
-<div id="lyric">
-  <%=render :partial => 'form_lyrics' %>
-</div>
-
-
-<%= link_to "edit", edit_track_path(@track.id) %>
-
-<%= link_to "delete", @track, :method => :delete ,:confirm => "Are you sure?" %>
 
 <div id="lyrics_partial">
   <%=render :partial => 'lyrics' %>
-  </div>
+</div>

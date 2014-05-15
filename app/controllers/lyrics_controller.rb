@@ -4,20 +4,25 @@ class LyricsController < ApplicationController
 
   def create
     @lyric = @track.lyrics.build(lyric_params)
-    # @lyric.user_id = current_user.id
     respond_to do |format|
       if @lyric.save
         format.html {redirect_to track_path(@track.id), notice: 'Bars created Homie, BRAP BRAP BRAP!!!!!'}
-        format.js
+        # format.js {}
       else
         format.html {render 'lyrics/:id', alert: 'Ive been shot. your bars arent saved'}
-        format.js {}
+        # format.js {}
       end
     end
   end
 
+  def new
+    @lyric = Lyric.new
+    #@lyric.track_id = params[:track_id]
+  end
+
   def edit
     @lyric = Lyric.find(params[:id])
+    @lyric.track_id = params[:track_id]
   end
 
   def update
@@ -33,7 +38,6 @@ class LyricsController < ApplicationController
     end
   end
 
-
   private
   def load_track
     @track = Track.find(params[:track_id])
@@ -41,7 +45,6 @@ class LyricsController < ApplicationController
   def lyric_params
     params.require(:lyric).permit(:content, :block_type, :order, :tracks_id)
   end
-
 
 end
 

@@ -12,17 +12,16 @@ class TracksController < ApplicationController
     respond_to do |format|
       if @track.save
         format.html {redirect_to track_path(@track)}
-        format.js {}
+        # format.js {}
       else
         format.html {render :new}
-        format.js {}
+        # format.js {}
       end
     end
   end
 
   def show
     @track = Track.find(params[:id])
-    @lyric = @track.lyrics.build
 
   end
 
