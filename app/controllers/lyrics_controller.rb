@@ -22,11 +22,15 @@ class LyricsController < ApplicationController
 
   def update
     @lyric = @track.lyrics.find(params[:id])
+    respond_to do |format|
       if @lyric.update_attributes(lyric_params)
-        redirect_to track_lyric_path(@track, @lyric.id)
+        format.html {redirect_to track_lyric_path(@track, @lyric.id)}
+        format.js {}
       else
-        redirect_to edit_track_lyric_path(@track, @lyric.id)
+        format.html {redirect_to edit_track_lyric_path(@track, @lyric.id)}
+        format.js {}
       end
+    end
   end
 
 

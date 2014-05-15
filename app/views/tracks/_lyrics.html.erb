@@ -1,9 +1,9 @@
 <% @track.lyrics.each do |lyric| %>
   <div class="lyric">
     <p>
-    <%= lyric.content %>
+    <%= simple_format(lyric.content) %>
     <br>
-    <%= link_to 'edit lyrics', [:edit, @track, @lyric.id] %>
+    
   </p>
   </div>
 <% end %>
