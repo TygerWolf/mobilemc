@@ -4,12 +4,17 @@
 
 </div>
 
+
+
+<div id="lyric">
+  <%=render :partial => 'form_lyrics' %>
+</div>
+
+
 <%= link_to "edit", edit_track_path(@track.id) %>
 
 <%= link_to "delete", @track, :method => :delete ,:confirm => "Are you sure?" %>
 
-<script>
-  $('p').first().prepend('<h2>HOOK</h2>');
-  $("p:gt(0)").prepend('<h2>VERSE</h2>');
-  $("p:gt(0)").append('<button type="button">HOOK</button>');
-</script>
+<div id="lyrics_partial">
+  <%=render :partial => 'lyrics' %>
+  </div>
