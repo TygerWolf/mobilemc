@@ -2,21 +2,19 @@
 
 $(document).ready(function(){
 
-var counter = 0
-var hook = 0
+// var counter = 0
+// var hook = 0
   
-  $('body').keypress(function(e){
-    if(e.which === 13){
-      counter+=1;
-      if (counter == 1) {setTimeout(function(){counter=0},500)}
-      else if (counter == 2){
-        saveTrack();
-        }
-      }  
-  });  
+  // $('#new_lyric').submit(function(e){
+  //   // if(e.which === 13){
+  //   //   counter+=1;
+  //   //   if (counter == 1) {setTimeout(function(){counter=0},500)}
+  //   //   else if (counter == 2){
+  //       saveTrack();  
+  // });  
 
-  function saveTrack(){
-    var $this = $('#new_track');
+  $('#new_lyric').submit(function(){
+    var $this = $('#new_lyric');
     var url = $this.attr('action');
     var method = $this.attr('method');
     var data = $this.serialize();
