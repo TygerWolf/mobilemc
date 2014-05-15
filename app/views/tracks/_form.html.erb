@@ -2,28 +2,29 @@
 
   <p>
   <%= f.label :barindicator %>
+  <br>
   <%= f.text_field :barindicator %>
   </p>
 
   <p>
   <%= f.label :title %>
+  <br>
   <%= f.text_field :title %>
   </p>
-
   <p>
   <%= f.label :lyrics %>
-  <%= f.text_area :lyrics %>
+    <br>
+  <%= f.text_area :lyrics %>  
   </p>
-
-
-  <p>
-  <%= f.submit "Save Track" %>
-  </p>
+  
+  <div id="save"> 
+    <p>
+    <%= f.submit "Save Track" %>
+    </p>
+  </div>
 
 <%end%>
 
 <div id="track">
-
   <%=render :partial => 'tracks' %>
-
 </div>
