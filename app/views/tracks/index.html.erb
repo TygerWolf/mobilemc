@@ -1,5 +1,26 @@
+<html>
+<head>
+	<title>
+	All my tracks
+	</title>
+  	<head>
+    	<title>Tic-Tac-Toe by Taha Jalil</title>
+    	<link rel="stylesheet" type="text/css" href="application.css">
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="application.js"></script>
+  	</head>
+
+<% end %>
+
+</head>
+<body>
 <h1>All my tracks:</h1>
 
 <% @tracks.each do |t| %>
 <h3><%= link_to t.title, track_path(t.id) %></h3>
 <% end %>
+</body>
+</html>
+
+
+
