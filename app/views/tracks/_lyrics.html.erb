@@ -1,9 +1,13 @@
 <% @track.lyrics.each do |lyric| %>
   <div class="lyric">
     <p>
+    <%= simple_format(lyric.block_type) %>
     <%= simple_format(lyric.content) %>
+    <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
+    <%= link_to "Delete Block",track_lyric_path(@track, lyric), :method => :delete ,:confirm => "Are you sure?" %>
     <br>
-
+    ____
   </p>
   </div>
+
 <% end %>

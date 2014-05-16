@@ -33,10 +33,10 @@ class TracksController < ApplicationController
     respond_to do |format|
       if @track.update_attributes(track_params)
         format.html {redirect_to track_path}
-        format.js {}
+        # format.js {}
       else
         render :edit
-        format.js {}
+        # format.js {}
       end
     end
   end
