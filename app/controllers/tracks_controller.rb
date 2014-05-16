@@ -47,6 +47,10 @@ class TracksController < ApplicationController
     redirect_to tracks_path
   end
 
+  def play
+    @track = Track.find(params[:id])
+  end
+
   private
 
   def track_params

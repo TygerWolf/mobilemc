@@ -1,0 +1,14 @@
+<% @track.lyrics.each do |lyric| %>
+  <div class="lyric">
+    <p>
+    <%= simple_format(lyric.block_type) %>
+    <%= simple_format(lyric.content) %>
+
+    <br>
+    ____
+
+  </p>
+  </div>
+
+<% end %>
+
