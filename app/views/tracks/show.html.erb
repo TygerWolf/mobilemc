@@ -2,10 +2,13 @@
   <%=render :partial => 'tracks' %>
 </div>
 
-<%= link_to "Edit Song", edit_track_path(@track.id) %> |
+<%= link_to "Edit Track", edit_track_path(@track.id) %> |
 <%= link_to "Delete Song", @track, :method => :delete ,:confirm => "Are you sure?" %> |
 <%= link_to "Add a Block!", new_track_lyric_path(@track.id) %>
 
+<div id="Barindicator">
+  <%= render :partial => 'barindicator' %>
+</div>
 
 <div id="lyrics_partial">
   <%=render :partial => 'lyrics' %>

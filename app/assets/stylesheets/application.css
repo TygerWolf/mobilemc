@@ -12,22 +12,12 @@
  *= require foundation_and_overrides
 
  *= require_tree .
+ *= require foundation
  */
 
-
-html {
-  background-color: white;
-  font-family: helvetica;
-  height: 100%;
-  width: 100%;
-  border: solid yellow;
-}
-
-
-h1,h2,h3 {
+td h1 {
   font-size: 500;
   color: yellow;
-  border: yellow;
 }
 
 #lyric_content {
@@ -58,42 +48,3 @@ form {
   position: relative;
 }
 
-/*Target iPhone's screen width*/
-
-/*Do not set fixed widths, use %*/
-    /*body{
-        -webkit-text-size-adjust:none;
-        font-family:Helvetica, Arial, Verdana, sans-serif;
-        padding:5px;
-    }
-/*Set widths to 100%*/
-    /*html{
-        clear:both!important;
-        display:block!important;
-        width:100% !important;
-        float:none!important;
-        margin:0!important;
-        padding:0!important;
-    }*/
-/*Create vertical navigation menu*/
-   /* #nav,#nav li{
-        float:none!important;
-        clear:both!important;
-        margin:0 0 20px 0!important;
-        display:block;
-        padding:0;
-        text-align:left!important;
-        width:100%;
-    }
-    #nav{
-        border:1px solid #ccc;
-        padding:5px;
-        border-radius:5px;
-    }
-    #nav li{
-        margin:0!important;
-    }
-    #nav li a{
-        display:block;
-    }
-*/

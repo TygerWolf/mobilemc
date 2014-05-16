@@ -1,18 +1,18 @@
 <%= form_for(@track) do |f| %>
 
   <p>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :title %>
+  </p>
+
+  <p>
   <%= f.label :barindicator %>
   <br>
   <%= f.text_field :barindicator %>
   </p>
 
-  <p>
-  <%= f.label :title %>
-  <br>
-  <%= f.text_field :title %>
-  </p>
-  
-  <div id="save"> 
+  <div id="save">
     <p>
     <%= f.submit "Save Track" %>
     </p>
