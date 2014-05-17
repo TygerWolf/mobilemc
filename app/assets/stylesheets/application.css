@@ -15,23 +15,17 @@
  *= require foundation
  */
 
-td h1 {
-  font-size: 500;
-  color: yellow;
-}
-
 #lyric_content {
   height: 10%;
   width: 90%;
-
 }
 
 #track_barindicator {
-  width: 50%;
+  width: 100%;
 }
 
 #track_title {
-  width: 50%;
+  width: 100%;
 }
 
 form {
@@ -51,4 +45,5 @@ form {
 #lyric {
   border: black;
 }
+
 
