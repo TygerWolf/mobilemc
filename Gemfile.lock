@@ -115,7 +115,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.4)
-  sass-rails (~> 4.0.2)
+  sass-rails (~> 4.0.3)
   sdoc
   sqlite3
   turbolinks

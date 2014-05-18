@@ -39,9 +39,9 @@
 // Global
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: #000000;
+$body-font-color: #FFE900;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -54,8 +54,8 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+$primary-color: #FFE900;
+$secondary-color: #000000;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -119,9 +119,9 @@
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: normal;
-// $header-font-style: normal;
-// $header-font-color: #222;
+// $header-font-weight: bold;
+// $header-font-style: bold;
+$header-font-color: #FFFFFF;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -335,7 +335,7 @@
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
-// $button-font-color: #fff;
+$button-font-color: #000000;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
@@ -1168,8 +1168,8 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #FFE900;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1257,6 +1257,7 @@
 // $range-slider-bar-border-width: 1px;
 // $range-slider-bar-border-style: solid;
 // $range-slider-bar-border-color: #ddd;
+//
 // $range-slider-radius: $global-radius;
 // $range-slider-round: $global-rounded;
 // $range-slider-bar-bg-color: #fafafa;
