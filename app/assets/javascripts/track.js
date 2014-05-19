@@ -8,12 +8,12 @@ $(document).ready(function(){
     var method = $this.attr('method');
     var data = $this.serialize();
 
-    $.ajax({
-      url: url,
-      type: method,
-      dataType: 'script',
-      data: data
-    });
+    // $.ajax({
+    //   url: url,
+    //   type: method,
+    //   dataType: 'script',
+    //   data: data
+    // });
   }
 });
 

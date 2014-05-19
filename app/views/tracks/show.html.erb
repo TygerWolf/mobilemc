@@ -8,6 +8,7 @@
 <%= link_to "Delete Song", @track, :method => :delete ,:confirm => "Are you sure?" %> |
 <%= link_to "Add a Block!", new_track_lyric_path(@track.id) %>
 
+
 <div id="lyrics_partial">
   <%=render :partial => 'lyrics' %>
 </div>

@@ -1,14 +1,22 @@
-<% @track.lyrics.each do |lyric| %>
-  <div class="lyric">
-    <p>
-    <%= simple_format(lyric.block_type) %>
-    <%= simple_format(lyric.content) %>
+<br>
 
-    <br>
-    ____
+<%= link_to "Back to Track", track_path %>
+<br>
 
-  </p>
+<marquee behavior="scroll" direction="up" scrollamount="2" style="height: 80%; border: 1px solid #CCC">
+  <div class="complete_lyrics" style="height: 800px;">
+    <% @track.lyrics.each do |lyric| %>
+      <div class="lyric">
+        <p>
+
+
+        <%= simple_format(lyric.block_type) %>
+        <%= simple_format(lyric.content) %><br>
+
+        </p>
+
+     </div>
+
+    <% end %>
   </div>
-
-<% end %>
-
+</marquee>
