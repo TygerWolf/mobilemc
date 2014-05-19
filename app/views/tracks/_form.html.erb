@@ -1,29 +1,21 @@
 <%= form_for(@track) do |f| %>
 
   <p>
-  <%= f.label :barindicator %>
-  <%= f.text_field :barindicator %>
+    <%= f.label :title  %>
+   <%= f.text_field :title %>
   </p>
 
   <p>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+    <%= f.label :barindicator %>
+    <%= f.text_field :barindicator %>
   </p>
 
-  <p>
-  <%= f.label :lyrics %>
-  <%= f.text_area :lyrics %>
-  </p>
-
-
-  <p>
-  <%= f.submit "Save Track" %>
-  </p>
+  <div id="save">
+    <%= f.submit "Save Track" %>
+  </div>
 
 <%end%>
 
 <div id="track">
-
   <%=render :partial => 'tracks' %>
-
 </div>

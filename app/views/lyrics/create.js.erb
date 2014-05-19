@@ -1,0 +1,3 @@
+$('#lyrics_partial').html("<%= j(render(:partial => 'tracks/lyrics'))%>");
+$("#new_lyric").attr("action", "/tracks/<%= @track.id %>");
+$("#new_lyric").attr("method", "put");

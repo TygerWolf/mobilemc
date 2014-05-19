@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation_and_overrides
  *= require_tree .
  */
 
@@ -45,3 +46,24 @@ html, body
 
 
 
+
+
+/*#track_barindicator {
+  width: 100%;
+}
+
+#track_title {
+  width: 100%;
+}
+
+#actions {
+  clear:both;
+  position: relative;
+}
+
+#lyric {
+  border: black;  
+}
+
+
+*/

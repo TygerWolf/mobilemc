@@ -12,17 +12,16 @@ class TracksController < ApplicationController
     respond_to do |format|
       if @track.save
         format.html {redirect_to track_path(@track)}
-        format.js {}
+        # format.js {}
       else
         format.html {render :new}
-        format.js {}
+        # format.js {}
       end
     end
   end
 
   def show
     @track = Track.find(params[:id])
-    
   end
 
   def edit
@@ -34,10 +33,10 @@ class TracksController < ApplicationController
     respond_to do |format|
       if @track.update_attributes(track_params)
         format.html {redirect_to track_path}
-        format.js {}
+        # format.js {}
       else
         render :edit
-        format.js {}
+        # format.js {}
       end
     end
   end
@@ -48,10 +47,14 @@ class TracksController < ApplicationController
     redirect_to tracks_path
   end
 
+  def play
+    @track = Track.find(params[:id])
+  end
+
   private
 
   def track_params
-    params.require(:track).permit(:title, :lyrics, :barindicator)
+    params.require(:track).permit(:title, :barindicator)
   end
 
 end
