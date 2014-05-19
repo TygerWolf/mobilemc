@@ -1,7 +1,9 @@
 <h1>Spit yo Tracks:</h1>
 
-<%= link_to "Add a Track", new_track_path %>
 
 <% @tracks.each do |t| %>
-<h3><%= link_to t.title, track_path(t.id) %></h3>
+    
+    <h3><%= link_to t.title, track_path(t.id) %></h3>
+    
 <% end %>
+
