@@ -1,10 +1,10 @@
 <h1>Spit yo Tracks:</h1>
 
 <% @tracks.each do |t| %>
-      <div class="large-8 columns">
+      <div class="small-9 columns">
         <h3><%= link_to t.title, track_path(t.id) %></h3>
       </div>
-      <div class="large-4 columns">
+      <div class="small-3 columns">
         <h4><%= link_to t.bpm, track_path(t.id) %>BPM</h4>
     </div>
 
