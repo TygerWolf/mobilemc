@@ -1,6 +1,5 @@
 $(document).ready(function() {
-    $('#button').click(function(e) {
-    	e.preventDefault();
-        $('#wrapper').animate({bottom:"+=700px"}, 6000);
+    $('#button').click(function() {
+        $('#wrapper').animate({bottom:"+=700px"}, 15000);
      });
 });
