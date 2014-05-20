@@ -1,10 +1,14 @@
+
+
 <br>
 
 <%= link_to "Back to Track", track_path %>
 <br>
 
-<marquee behavior="scroll" direction="up" scrollamount="2" style="height: 80%; border: 1px solid #CCC">
-  <div class="complete_lyrics" style="height: 800px;">
+<a href="#" id="button">Scroll Lyrics</a>
+
+<div id="wrapper">
+  <div class="complete_lyrics">
     <% @track.lyrics.each do |lyric| %>
       <div class="lyric">
         <p>
@@ -19,4 +23,4 @@
 
     <% end %>
   </div>
-</marquee>
+
