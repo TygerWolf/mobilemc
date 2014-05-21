@@ -3,23 +3,28 @@
 <br>
 
 <%= link_to "Back to Track", track_path %>
-<br>
+</br>
 
-<a href="#" id="button">Scroll Lyrics</a>
 
-<div id="wrapper">
-  <div class="complete_lyrics">
-    <% @track.lyrics.each do |lyric| %>
-      <div class="lyric">
-        <p>
+<div id="leftside">
+  <div class="song_container" id="playsong">
+    <div class="song"> 
+      <div class="text">
+        <div class="complete_lyrics">
+          <% @track.lyrics.each do |lyric| %>
+          <div class="lyric">
+            <p>
+              <%= simple_format(lyric.block_type) %>
+              <%= simple_format(lyric.content) %>
+            </p>
+          </div> 
 
-        <%= simple_format(lyric.block_type) %>
-        <%= simple_format(lyric.content) %><br>
-
-        </p>
-
-     </div>
-
-    <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+
 
