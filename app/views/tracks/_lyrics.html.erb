@@ -1,19 +1,11 @@
-<% @track.lyrics.each do |lyric| %>
-  <div class="lyric">
-    <p>
-    <%= simple_format(lyric.block_type) %>
-    <%= simple_format(lyric.content) %>
-    <%= lyric.track.hook_bars %> <br>
+    <% @track.lyrics.each do |lyric| %>
+        <br>
+        <%= simple_format(lyric.block_type) %>
+        <%= simple_format(lyric.content) %>   
+        <%= lyric.track.hook_bars %><br>
+        <br>
 
-    <br>
-    <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
-
-    <%= link_to "Delete Block", track_lyric_path(@track, lyric), :method => :delete ,:confirm => "You sure Playa?!" %>
-
-    <br>
-    ____
-
-  </p>
-  </div>
-
-<% end %>
+        <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
+        <%= link_to "Delete Block", track_lyric_path(@track, lyric), :method => :delete ,:confirm => "You sure Playa?!" %>
+        <br>
+    <% end %>  
