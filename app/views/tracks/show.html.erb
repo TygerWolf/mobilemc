@@ -13,7 +13,7 @@
       <%= link_to "Back", tracks_path %> |
       <%= link_to "Edit Track", edit_track_path(@track.id) %> |
       <%= link_to "Delete Song", @track, :method => :delete ,:confirm => "Are you sure?" %> |
-      <%= link_to "Add a Block!", new_track_lyric_path(@track.id) %>
+      <a id="new_lyric_button" href="#new_lyrics">Add New Lyrics</a>
     </div>
   </div>
 
@@ -22,7 +22,7 @@
 <div class="row">
 <!--   <div class="small-3 columns">
   </div> -->
-  <div class="small-9 columns">  
+  <div class="small-9 columns">
     <div id="lyrics_partial">
       <%=render :partial => 'lyrics' %>
     </div>

@@ -4,14 +4,16 @@ class LyricsController < ApplicationController
 
   def create
     @lyric = @track.lyrics.build(lyric_params)
+
     respond_to do |format|
       if @lyric.save
-        format.html { redirect_to @track }
-        # format.js {}
+        format.html { redirect_to @track, alert: "Your bar's have been saved homes. BRAP! BRAP! BRAP!" }
+        format.js {}
       else
         format.html {render 'lyrics/:id', alert: 'Ive been shot. your bars arent saved'}
-        # format.js {}
+        format.js {}
       end
+
     end
   end
 
