@@ -1,31 +1,32 @@
 (function($, undefined) {
   $.fn.loopScroll = function(p_options) {
+    var bpm = parseInt($("#bpm_holder").val());
     var options = $.extend({
-        direction: "upwards",
-        speed: 60
+      direction: "upwards",
+      speed: bpm/4
     }, p_options);
 
     return this.each(function() {
       var obj = $(this).find(".song");
       var text_height = obj.find(".text").height();
       var start_y, end_y;
-        if (options.direction == "downwards") {
+      if (options.direction == "downwards") {
         start_y = -text_height;
         end_y = 0;
-        } 
-        else if (options.direction == "upwards") {
+      } 
+      else if (options.direction == "upwards") {
         start_y = 0;
         end_y = -text_height;
-        }
+      }
 
 
       var animate = function() {
         // setup animation of specified block "obj"
         // calculate distance of animation    
         var distance = Math.abs(end_y - parseInt(obj.css("top")));
-          
+
           //alert("animate " + obj.css("top") + "-> " + end_y + " " + distance);
-           
+
         //duration will be distance / speed
         obj.animate(
           { top: end_y },  //scroll upwards
@@ -35,8 +36,8 @@
               // scroll to start position
               obj.css("top", start_y);
               animate();    
-          }
-        );
+            }
+            );
       };
 
       obj.find(".text").clone().appendTo(obj);
@@ -47,9 +48,9 @@
       });
       obj.css("top", start_y);
       animate(); // start animation
-        
+
     });
-  };
+};
 }(jQuery));
 
 $("#playsong").loopScroll();
