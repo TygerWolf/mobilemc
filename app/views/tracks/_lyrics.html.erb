@@ -1,11 +1,32 @@
     <% @track.lyrics.each do |lyric| %>
         <br>
         <%= simple_format(lyric.block_type) %>
-        <%= simple_format(lyric.content) %>   
+        <%= simple_format(lyric.content) %>
         <%= lyric.track.hook_bars %><br>
         <br>
 
         <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
         <%= link_to "Delete Block", track_lyric_path(@track, lyric), :method => :delete ,:confirm => "You sure Playa?!" %>
         <br>
-    <% end %>  
+
+
+
+
+    <% end %>
+        <div id= "new_lyrics">
+
+        <%= form_for([@track, Lyric.new], html: {style: "display:none;"}) do |f| %>
+        <div class="dropdown">
+            <%= f.select :block_type, ["Hook", "Verse"]  %>
+        </div>
+
+        <div class="field">
+            <%= text_area_tag :content %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit %>
+        </div>
+
+    <%end%>
+    </div>
