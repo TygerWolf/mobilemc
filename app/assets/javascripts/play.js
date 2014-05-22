@@ -15,6 +15,7 @@
         end_y = 0;
       } 
       else if (options.direction == "upwards") {
+        }
         start_y = 0;
         end_y = -text_height;
       }
@@ -22,7 +23,7 @@
 
       var animate = function() {
         // setup animation of specified block "obj"
-        // calculate distance of animation    
+        // calculate distance of animation
         var distance = Math.abs(end_y - parseInt(obj.css("top")));
 
           //alert("animate " + obj.css("top") + "-> " + end_y + " " + distance);
@@ -37,7 +38,6 @@
               obj.css("top", start_y);
               animate();    
             }
-            );
       };
 
       obj.find(".text").clone().appendTo(obj);
