@@ -1,30 +1,37 @@
 <br>
+<div class="row">
+
+    <div class="small-9 columns">
     <% @track.lyrics.each do |lyric| %>
         -<%= lyric.block_type %>-
             <br><br>
-        <%= lyric.content %>
+        <%= simple_format(lyric.content) %>
             <br><br>
-        <%= lyric.track.hook_bars %>
+        <div class="row">
+            <div class="small-9 columns">
+             <%= lyric.track.hook_bars %>
+            </div>
+        </div>
             <br><br>
         <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
         <%= link_to "Delete Block", track_lyric_path(@track, lyric), :method => :delete ,:confirm => "You sure Playa?!" %>
         <br><br>
-
     <% end %>
-        <div id= "new_lyrics">
+    </div>
+</div>
 
-        <%= form_for([@track, Lyric.new], html: {style: "display:none;"}) do |f| %>
+<div id= "new_lyrics">
+    <%= form_for([@track, Lyric.new], html: {style: "display:none;"}) do |f| %>
         <div class="dropdown">
             <%= f.select :block_type, ["Hook", "Verse"]  %>
         </div>
 
         <div class="field">
-            <%= text_area_tag :content %>
+            <%= f.text_area :content %>
         </div>
 
         <div class="actions">
-            <%= f.submit "Save Block", :class => 'button [tiny small large]' %>
+            <%= f.submit "Save Block", :class => 'button tiny alert' %>
         </div>
-
     <%end%>
-    </div>
+</div>

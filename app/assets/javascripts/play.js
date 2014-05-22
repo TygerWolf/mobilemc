@@ -1,8 +1,9 @@
 (function($, undefined) {
   $.fn.loopScroll = function(p_options) {
+    var bpm = parseInt($("#bpm_holder").val());
     var options = $.extend({
         direction: "upwards",
-        speed: 60
+        speed: bpm/4
     }, p_options);
 
     return this.each(function() {
@@ -12,7 +13,7 @@
         if (options.direction == "downwards") {
         start_y = -text_height;
         end_y = 0;
-        } 
+        }
         else if (options.direction == "upwards") {
         start_y = 0;
         end_y = -text_height;
@@ -21,11 +22,11 @@
 
       var animate = function() {
         // setup animation of specified block "obj"
-        // calculate distance of animation    
+        // calculate distance of animation
         var distance = Math.abs(end_y - parseInt(obj.css("top")));
-          
+
           //alert("animate " + obj.css("top") + "-> " + end_y + " " + distance);
-           
+
         //duration will be distance / speed
         obj.animate(
           { top: end_y },  //scroll upwards
@@ -34,7 +35,7 @@
           function() {
               // scroll to start position
               obj.css("top", start_y);
-              animate();    
+              animate();
           }
         );
       };
@@ -47,7 +48,7 @@
       });
       obj.css("top", start_y);
       animate(); // start animation
-        
+
     });
   };
 }(jQuery));
