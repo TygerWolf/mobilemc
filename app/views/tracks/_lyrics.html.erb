@@ -1,16 +1,14 @@
 <br>
-<div class="row">
 
-    <div class="small-9 columns">
     <% @track.lyrics.each do |lyric| %>
+    <div class="row">
+    <div class="small-10 columns">
         -<%= lyric.block_type %>-
             <br><br>
         <%= simple_format(lyric.content) %>
             <br><br>
-        <div class="row">
-            <div class="small-9 columns">
-             <%= lyric.track.hook_bars %>
-            </div>
+        <div class="small-2 columns">
+             -<%= lyric.track.hook_bars %>-
         </div>
             <br><br>
         <%= link_to "Edit Block", edit_track_lyric_path(@track, lyric)%> |
