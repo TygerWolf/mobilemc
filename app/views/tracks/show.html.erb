@@ -8,7 +8,7 @@
 
 <div class="row">
 
-    <div class="small-8 columns">
+    <div class="small-10 columns">
       <%= link_to "Play",  play_path(@track.id)%> |
       <%= link_to "Back", tracks_path %> |
       <%= link_to "Edit Track", edit_track_path(@track.id) %> |
@@ -18,13 +18,13 @@
   </div>
 
 <br>
-
 <div class="row">
-<!--   <div class="small-3 columns">
-  </div> -->
-  <div class="small-9 columns">
+  <div></div>
+
+<div class="small-2 columns"></div>
+
+<div class="small-10 columns">
     <div id="lyrics_partial">
       <%=render :partial => 'lyrics' %>
     </div>
-  </div>
-</div>
+</div></div>

@@ -10,18 +10,18 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body>
-
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to "mobilemc", tracks_path %></h1>
-    </li>
+ <body>
+<div class="fixed">
+    <nav class="top-bar" data-topbar>
+     <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "mobilemc", tracks_path %></h1>
+        </li>
          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-     <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-    </ul>
-  </ul>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a>
+        </li>
+      </ul>
+<!--   </ul> -->
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
@@ -40,15 +40,16 @@
       <li><%= link_to "tracks", tracks_path %></li>
     </ul>
   </section>
-</nav>
-
-  <div class="row">
-   <div class="small-12 columns">
-    <%= yield %>
-
-    <%= javascript_include_tag "application" %>
-  </div>
-</div>
+  </nav>
+ </div>
+ <br><br><br>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
+      </div>
+    </div>
+ 
   </body>
 </html>
 
