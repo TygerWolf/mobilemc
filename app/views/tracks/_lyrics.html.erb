@@ -1,12 +1,13 @@
 <br>
 
     <% @track.lyrics.each do |lyric| %>
-    <div class="row">
-    <div class="small-10 columns">
+
         -<%= lyric.block_type %>-
             <br><br>
         <%= simple_format(lyric.content) %>
             <br><br>
+                <div class="row">
+    <div class="small-10 columns">
         <div class="small-2 columns">
              -<%= lyric.track.hook_bars %>-
         </div>
