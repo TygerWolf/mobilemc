@@ -3,7 +3,7 @@
     var bpm = parseInt($("#bpm_holder").val());
     var options = $.extend({
         direction: "upwards",
-        speed: bpm/4
+        speed: bpm/6
     }, p_options);
 
     return this.each(function() {
